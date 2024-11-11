@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../aulas/aulas.html">Aulas</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li><a href="../cadastro/cadastro.html">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Jogos Populares</h1>
+        <p>Filtrar por: 
+             <select id="filtroGenero" onchange="filtrarJogos()">
+                <option value="todos">Todos</option>
+                <option value="rpg">RPG</option>
+                <option value="battle-royale">Battle Royale</option>
+                <option value="fps">FPS</option>
+                <option value=""></option>
+            </select>
+        </p>
+        <div class="game-list">
+            <a href="../jogos/valorant.html" class="game-item" data-genero="fps">
+                <img src="../../img/valorant.jpg" alt="Valorant">
+            </a>
+            <a href="../jogos/lol.html" class="game-item" data-genero="rpg">
+                <img src="../../img/league-of-legends.jpg" alt="League of Legends">
+            </a>
+            <a href="../jogos/fortnite.html" class="game-item" data-genero="battle-royale">
+                <img src="../../img/fortnite-2024.jpg" alt="Fortnite">
+            </a>
+            <a href="../jogos/cs2.html" class="game-item" data-genero="fps">
+                <img src="../../img/cs2.jpg" alt="Counter Strike">
+            </a>
+            <a href="../jogos/pubg.html" class="game-item" data-genero="battle-royale">
+                <img src="../../img/pubg.jpg" alt="PUBG Battleground">
+            </a>
+            <a href="../jogos/r6.html" class="game-item" data-genero="fps">
+                <img src="../../img/r6siege.jpg" alt="Rainbow Six">
+            </a>
+            <a href="" class="game-item" data-genero="">
+
+            </a>
+
+            <a href="" class="game-item" data-genero="">
+
+            </a>
+            <a href="" class="game-item">
+
+            </a>
+            <a href="" class="game-item">
+
+            </a>
+            <a href="" class="game-item">
+                
+            </a>
+            
+        </div>
+    </main>
+    <script>
+        function filtrarJogos() {
+            const genero = document.getElementById('filtroGenero').value;
+            const jogos = document.querySelectorAll('.game-item');
+
+            jogos.forEach(jogo => {
+                if (genero === 'todos' || jogo.dataset.genero === genero) {
+                    jogo.style.display = 'inline-block'; // Exibir jogo
+                } else {
+                    jogo.style.display = 'none'; // Ocultar jogo
+                }
+            });
+        }
+    </script>
+</body>
+</html>

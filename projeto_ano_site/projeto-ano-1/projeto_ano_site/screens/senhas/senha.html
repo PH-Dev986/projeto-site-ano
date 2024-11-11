@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="senha.css">
+  <title>Esqueceu a Senha?</title>
+
+  <script>
+    function handleForgotPassword(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value;
+
+      
+
+      // Registrando o email no console para depuração
+      console.log('Email enviado com sucesso:', email);
+
+      // Mostrando alerta e redirecionando
+      alert('Instruções de redefinição de senha enviadas para ' + email + '!');
+      setTimeout(() => {
+        window.location.href = "../login/login.html";
+      }, 2000);
+    }
+    function handleForgotPassword(event) {
+      event.preventDefault(); 
+  
+      const email = document.getElementById('email').value
+      console.log('Sending email instructions to:', email)
+      alert('Instruções de redefinição de senha enviadas para ' + email + '!')
+      document.getElementById('forgot-password-form').reset()
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <a href="../../screens/home/home.html" ><img src="../../img/logo-site.png" alt="Logo do Projeto" class="logo"></a>
+    <h1>Esqueceu a Senha?</h1>
+    <p>Informe o e-mail associado à sua conta e enviaremos instruções para redefini-la.</p>
+    <form id="forgot-password-form">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Enviar Instruções</button>
+      </div>
+    </form>
+    <div class="register-link">
+      <a href="../login/login.html">Voltar ao Login</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://discord.com/" target="_blank"><i class="fab fa-discord"></i></a>
+    </div>
+  </div>
+</body>
+</html>
+<script>
+  
+</script>
