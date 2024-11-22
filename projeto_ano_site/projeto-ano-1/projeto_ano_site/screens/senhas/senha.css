@@ -45,22 +45,23 @@ body {
     cursor: pointer;
   }
   
-  .register-link {
-    text-align: center;
-    margin-top: 10px;
-  }
+  .register-link a {
+    color: #fff; /* Torna o texto branco */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    transition: color 0.3s ease; /* Efeito de transição para mudança de cor */
   
-  .social-icons {
-    text-align: center;
-    margin-top: 20px;
-  }
+}
+
+.register-link a:hover {
+    color: #EF0C0C; /* Cor ao passar o mouse */
+}
   
-  .social-icons a {
-    margin: 0 10px;
-    color: #333;
-  }
+  
   .logo{
-    width: 100px;
+    width: 200px; /* Tamanho da logo ajustado */
+    height: auto; /* Mantém a proporção */
+    margin-left: 105px;
   }
   p{
     color: #fff;

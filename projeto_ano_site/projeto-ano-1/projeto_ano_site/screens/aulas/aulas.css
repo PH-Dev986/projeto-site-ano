@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d1117;
+    background-color: #707070;
     color: #fff;
 }
 
@@ -18,37 +18,51 @@ body {
 }
 
 header {
-    background-color: #707070;
+    background-color:#000;
     padding: 20px 0;
+    
 }
 
 header h1 {
     text-align: center;
     font-size: 2.5rem;
+    color:#fff
+}
+header .logo img {
+    width: 125px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    margin-left: -150px; /* Distância entre a logo e o texto */
 }
 
-nav ul {
+.nav-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os itens */
 }
 
-nav ul li {
-    margin: 0 15px;
+.nav-list li {
+    font-size: 1rem; /* Tamanho do texto consistente */
+    text-transform: capitalize; /* Deixa as palavras com a primeira letra maiúscula */
 }
 
-nav ul li a {
-    color: #fff;
+.nav-list a {
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px 20px;
+    color: #fff; /* Cor preta para os links */
+    padding: 5px 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Bordas sutis para os links */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
 }
 
-nav ul li a:hover {
-    background-color: #4682b4;
-    border-radius: 5px;
+.nav-list a:hover {
+    background-color: #EF0C0C; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    border-color: #EF0C0C; /* Bordas combinando com o hover */
 }
-
 .section {
     padding: 50px 0;
     text-align: center;
@@ -82,4 +96,8 @@ footer {
 
 footer p {
     font-size: 1rem;
+}
+
+#logo {
+  
 }

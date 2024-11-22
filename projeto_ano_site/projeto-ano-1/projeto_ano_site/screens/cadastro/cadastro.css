@@ -91,7 +91,7 @@ button:hover {
 }
 
 .logo {
-    scale: 100%;
-    
-  
+    width: 200px; /* Tamanho da logo ajustado */
+    height: auto; /* Mantém a proporção */
+    margin-left: 160px;
 }
